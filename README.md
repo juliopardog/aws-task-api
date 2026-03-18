@@ -15,6 +15,15 @@ This project demonstrates how to design and deploy a scalable cloud-native appli
 
 ---
 
+## Project Highlights
+
+* Built with a fully serverless architecture using managed AWS services
+* Separates API routing, business logic, and data storage into distinct components
+* Designed to be lightweight, scalable, and cost-efficient
+* Demonstrates practical use of Lambda, API Gateway, and DynamoDB in a real deployment
+
+---
+
 ## Live API
 
 GET:
