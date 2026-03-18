@@ -14,6 +14,12 @@ This project demonstrates how to design and deploy a scalable cloud-native appli
 * Scalable and cost-efficient design
 
 ---
+## Live API
+
+GET:
+https://0azoel99xd.execute-api.us-east-1.amazonaws.com/tasks?userId=test-user
+
+---
 
 ## Architecture
 
