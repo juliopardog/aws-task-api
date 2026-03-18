@@ -138,14 +138,6 @@ aws-task-api/
 
 ---
 
-## What I Learned
-
-* How to build and deploy serverless APIs using AWS
-* Connecting API Gateway with Lambda functions
-* Designing DynamoDB tables for scalable data storage
-* Handling HTTP requests and responses in a cloud environment
-
----
 
 ## Future Improvements
 
