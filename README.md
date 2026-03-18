@@ -6,82 +6,13 @@ This project demonstrates how to design and deploy a scalable cloud-native appli
 
 ---
 
-##  Architecture Diagram
+## Architecture Diagram
 
 ```mermaid
 flowchart TD
     A[Client] -->|HTTP Request| B[API Gateway]
-    B -->|Invoke Lambda| C[AWS Lambda<br/>(createTask / getTasks)]
+    B -->|Invoke Lambda| C[AWS Lambda (createTask / getTasks)]
     C -->|Read/Write| D[DynamoDB]
----
-
-## Features
-
-* Create tasks
-* Retrieve tasks by userId
-* Serverless architecture (no servers to manage)
-* Scalable and cost-efficient design
-
----
-
-## Architecture
-
-* AWS Lambda → Handles business logic (createTask, getTasks)
-* API Gateway → Exposes HTTP endpoints
-* DynamoDB → Stores task data
-
----
-
-## API Endpoints
-
-### GET /tasks?userId=test-user
-
-Retrieve all tasks for a specific user
-
-Example request:
-
-```
-GET /tasks?userId=test-user
-```
-
-Example response:
-
-```json
-{
-  "tasks": [
-    {
-      "taskId": "123",
-      "title": "My first task",
-      "completed": false,
-      "createdAt": "2026-03-18T01:16:24.724434",
-      "userId": "test-user"
-    }
-  ]
-}
-```
-
----
-
-### POST /tasks
-
-Create a new task
-
-Example request body:
-
-```json
-{
-  "userId": "test-user",
-  "title": "New Task"
-}
-```
-
-Example response:
-
-```json
-{
-  "message": "Task created successfully"
-}
-```
 
 ---
 
