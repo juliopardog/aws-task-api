@@ -14,10 +14,14 @@ This project demonstrates how to design and deploy a scalable cloud-native appli
 * Scalable and cost-efficient design
 
 ---
+
 ## Live API
 
 GET:
 https://0azoel99xd.execute-api.us-east-1.amazonaws.com/tasks?userId=test-user
+
+POST:
+https://0azoel99xd.execute-api.us-east-1.amazonaws.com/tasks
 
 ---
 
@@ -27,16 +31,16 @@ https://0azoel99xd.execute-api.us-east-1.amazonaws.com/tasks?userId=test-user
 flowchart TD
     subgraph AWS Cloud
         B[API Gateway]
-        C[AWS Lambda createTask and getTasks]
+        C[AWS Lambda Functions]
         D[DynamoDB]
     end
 
     A[Client] -->|HTTP Request| B
     B -->|Invoke Function| C
-    C -->|Read and Write| D
+    C -->|PutItem and Query| D
 ```
 
-* AWS Lambda -> Handles business logic (createTask, getTasks)
+* AWS Lambda -> Handles business logic for creating and retrieving tasks
 * API Gateway -> Exposes HTTP endpoints
 * DynamoDB -> Stores task data
 
@@ -46,7 +50,7 @@ flowchart TD
 
 ### GET /tasks?userId=test-user
 
-Retrieve all tasks for a specific user
+Retrieve all tasks for a specific user.
 
 Example request:  
 GET /tasks?userId=test-user
@@ -71,7 +75,7 @@ Example response:
 
 ### POST /tasks
 
-Create a new task
+Create a new task.
 
 Example request body:
 
@@ -134,6 +138,14 @@ aws-task-api/
 
 ---
 
+## What I Learned
+
+* How to build and deploy serverless APIs using AWS
+* Connecting API Gateway with Lambda functions
+* Designing DynamoDB tables for scalable data storage
+* Handling HTTP requests and responses in a cloud environment
+
+---
 
 ## Future Improvements
 
