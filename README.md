@@ -103,7 +103,11 @@ You can test the API using:
 Example:
 
 ```bash
-curl "https://your-api-url/tasks?userId=test-user"
+curl "https://0azoel99xd.execute-api.us-east-1.amazonaws.com/tasks?userId=test-user"
+
+curl -X POST "https://0azoel99xd.execute-api.us-east-1.amazonaws.com/tasks" \
+  -H "Content-Type: application/json" \
+  -d '{"userId":"test-user","title":"New Task"}'
 ```
 
 ---
