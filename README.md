@@ -9,13 +9,7 @@ This project demonstrates how to design and deploy a scalable cloud-native appli
 ## Architecture Diagram
 
 
-Client
-↓
-API Gateway
-↓
-AWS Lambda (createTask / getTasks)
-↓
-DynamoDB
+[Client] → [API Gateway] → [Lambda] → [DynamoDB]
 
 ---
 
