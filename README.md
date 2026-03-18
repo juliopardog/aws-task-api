@@ -1,122 +1,62 @@
-# AWS Task API
+# AWS Serverless Task API
 
-A simple serverless backend API built using AWS Lambda, API Gateway, and DynamoDB.
-
-This project demonstrates how to design and deploy a scalable cloud-native application without managing servers.
-
----
-
-## Features
-
-* Create tasks
-* Retrieve tasks by userId
-* Serverless architecture (no servers to manage)
-* Scalable and cost-efficient design
-
----
+This project is a serverless backend built using AWS Lambda, API Gateway, and DynamoDB. It allows users to create and retrieve tasks through REST API endpoints.
 
 ## Architecture
 
-* AWS Lambda → Handles business logic (createTask, getTasks)
-* API Gateway → Exposes HTTP endpoints
-* DynamoDB → Stores task data
+Client → API Gateway → Lambda → DynamoDB
 
----
+## Technologies
 
-## API Endpoints
+- AWS Lambda
+- API Gateway
+- DynamoDB
+- Node.js
+- Git & GitHub
 
-### GET /tasks?userId=test-user
+## Features
 
-Retrieve all tasks for a specific user
+- Create tasks
+- Retrieve tasks by user ID
+- Fully serverless (no servers to manage)
+- Scalable and cost-efficient
 
-Example request:
-GET /tasks?userId=test-user
+## Endpoints
 
-Example response:
+### Create Task
+POST /tasks
+
+Example body:
 {
-"tasks": [
-{
-"taskId": "123",
-"title": "My first task",
-"completed": false,
-"createdAt": "2026-03-18T01:16:24.724434",
-"userId": "test-user"
-}
-]
-}
-
----
-
-### POST /tasks
-
-Create a new task
-
-Example request body:
-{
-"userId": "test-user",
-"title": "New Task"
+  "userId": "123",
+  "task": "Study AWS"
 }
 
-Example response:
-{
-"message": "Task created successfully"
-}
-
----
-
-## Testing
-
-You can test the API using:
-
-* Browser (for GET requests)
-* Postman (recommended for POST requests)
-* Curl (via terminal)
-
-Example:
-curl "https://your-api-url/tasks?userId=test-user"
-
----
-
-## Tech Stack
-
-* Node.js (AWS Lambda runtime)
-* AWS Lambda
-* Amazon API Gateway
-* Amazon DynamoDB
-
----
+### Get Tasks
+GET /tasks?userId=123
 
 ## Project Structure
 
+
 aws-task-api/
 ├── createTask/
-│   └── index.js
+│ └── index.js
 ├── getTasks/
-│   └── index.js
-├── README.md
+│ └── index.js
+└── README.md
 
----
 
 ## What I Learned
 
-* How to build and deploy serverless APIs using AWS
-* Connecting API Gateway with Lambda functions
-* Designing DynamoDB tables for scalable data storage
-* Handling HTTP requests and responses in a cloud environment
-
----
+- Building serverless APIs using AWS Lambda
+- Connecting API Gateway to Lambda functions
+- Using DynamoDB for NoSQL data storage
+- Managing cloud resources efficiently
+- Using Git and GitHub for version control
 
 ## Future Improvements
 
-* Add authentication (JWT / Cognito)
-* Input validation
-* Error handling improvements
-* Frontend integration (React or simple UI)
-* Infrastructure as Code (Terraform or CloudFormation)
-
----
-
-## Author
-
-Julio Pardo
-Cloud Computing Student | AWS Certified
+- Add authentication (AWS Cognito)
+- Add input validation
+- Add logging (CloudWatch)
+- Infrastructure as Code (Terraform or CloudFormation)
