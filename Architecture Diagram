@@ -1,3 +1,0 @@
-## Architecture Diagram
-
-Client → API Gateway → Lambda → DynamoDB
