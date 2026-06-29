@@ -127,7 +127,7 @@ curl -X POST "https://0azoel99xd.execute-api.us-east-1.amazonaws.com/tasks" \
 
 ## Tech Stack
 
-* Node.js (AWS Lambda runtime)
+* Python (AWS Lambda runtime)
 * AWS Lambda
 * Amazon API Gateway
 * Amazon DynamoDB
